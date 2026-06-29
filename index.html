@@ -58,6 +58,9 @@
     }
 
     .header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
 }
@@ -131,19 +134,35 @@
       font-style: normal;
       color: #0645ad;
     }
+    .profile-photo {
+    width: 145px;
+    height: 145px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+.header-text {
+  flex: 1;
+}
   </style>
 </head>
 
 <body>
 
-  <div class="header">
+<div class="header">
+
+  <img class="profile-photo" src="images/My_photo.jpg" alt="Portrait of Zeyu Shen">
+
+  <div class="header-text">
     <h1>Zeyu Shen</h1>
-    
-   <p class="links">
-  Email: <a href="mailto:zshen39@jhu.edu">zshen39@jhu.edu</a>
-  GitHub: <a href="https://github.com/Zeyuu0920" target="_blank">Zeyuu0920</a>
-</p>
+
+    <p class="links">
+      Email: <a href="mailto:zshen39@jhu.edu">zshen39@jhu.edu</a>
+      · GitHub: <a href="https://github.com/Zeyuu0920" target="_blank">Zeyuu0920</a>
+    </p>
   </div>
+
+</div>
 
 <h2>About</h2>
 
@@ -261,7 +280,7 @@
 <div class="publication">
 
   <div class="pub-image">
-    <img src="images/Retrieval-Augmented World Models for Multitask Continuous Control.png" alt="Fast MPC warm-up preview">
+    <img src="images/Retrieval-Augmented World Models for Multitask Continuous Control.png" alt="Retrieval-Augmented World Models for Multitask Continuous Control">
   </div>
 
   <div class="pub-info">
