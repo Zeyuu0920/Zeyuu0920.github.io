@@ -135,12 +135,32 @@
       font-style: normal;
       color: #0645ad;
     }
-    .profile-photo {
-  width: 200px;
-  height: 220px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 0;
+    .profile-photo-frame {
+  position: relative;
+  flex: 0 0 240px;
+  width: 240px;
+  height: 280px;
+  overflow: hidden;
+}
+
+.profile-photo {
+  position: absolute;
+  width: 600px;
+  max-width: none;
+  height: auto;
+  left: -96px;
+  top: -190px;
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-photo-frame {
+    flex: none;
+  }
 }
 
 .header-text {
@@ -153,7 +173,9 @@
 
 <div class="header">
 
-  <img class="profile-photo" src="images/Profile_Photo_Zeyu.jpg" alt="Portrait of Zeyu Shen">
+  <div class="profile-photo-frame">
+    <img class="profile-photo" src="images/Profile_Photo_Zeyu.jpg" alt="Portrait of Zeyu Shen">
+  </div>
 
   <div class="header-text">
     <h1>Zeyu Shen</h1>
