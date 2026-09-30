@@ -167,6 +167,17 @@
 .header-text {
   flex: 1;
 }
+
+.visitor-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.2rem;
+  margin-top: 2rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid #eee;
+  color: #777;
+  font-size: 0.8rem;
+}
   </style>
 </head>
 
@@ -362,6 +373,26 @@
     Please feel free to reach out by email:
     <a href="mailto:zshen39@jhu.edu">zshen39@jhu.edu</a>.
   </p>
+
+
+<footer class="visitor-stats" aria-label="Site visit statistics">
+  <span id="busuanzi_container_site_pv" style="display: none">
+    Views: <span id="busuanzi_value_site_pv"></span>
+  </span>
+  <span id="busuanzi_container_site_uv" style="display: none" title="Estimated unique visitors">
+    Visitors: <span id="busuanzi_value_site_uv"></span>
+  </span>
+</footer>
+
+<script>
+  // Count production visits only; local previews and repository forks are excluded.
+  if (window.location.hostname === "zeyuu0920.github.io") {
+    const counter = document.createElement("script");
+    counter.src = "https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js";
+    counter.async = true;
+    document.head.appendChild(counter);
+  }
+</script>
 
 </body>
 </html>
